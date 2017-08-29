@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Insert Template</title>
+		<link type="text/css" rel="stylesheet" href="./template.css" />
+		<script type="text/javascript">
+			var KE = parent.KindEditor;
+			location.href.match(/\?id=([\w-]+)/i);
+			var id = RegExp.$1;
+			var stack = KE.g[id].dialogStack;
+			var dialog = stack[stack.length - 1];
+			var templatePath = "html/";
+			KE.event.ready(function() {
+				var templateType = KE.$('keTemplateType', document);
+				var replaceFlag = KE.$('keReplaceFlag', document);
+				var iframe = KE.$('keIframe', document);
+				iframe.src = templatePath+templateType.value + '.html';
+				KE.event.add(templateType, 'change', function (e) {
+				    iframe.src = templatePath + templateType.value + '.html';
+				});
+				dialog.yesButton.onclick = function(){
+				    var doc = KE.util.getIframeDoc(iframe);
+				    var html = doc.body.innerHTML;
+				    html = KE.util.trim(html);
+				    if(replaceFlag.checked){
+				       KE.html(id,html);
+				    }else{
+				       KE.util.insertHtml(id,html);
+				    }
+				    KE.util.focus(id);
+				    dialog.hide();
+				}
+				KE.util.pluginLang('template', document);
+				KE.util.hideLoadingPage(id);
+			}, window, document);
+		</script>
+	</head>
+	<body>
+		<table class="ke-plugin-template" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td class="ke-left">可选模板
+				    <select id="keTemplateType">
+				      <option value="1">标题</option>
+				      <option value="2">步骤</option>
+				      <option value="3">跳转</option>
+				    </select>
+				</td>
+				<td class="ke-right">
+				   <input id="keReplaceFlag" type="checkbox" name="keReplaceFlag">
+				   <label for="keReplaceFlag">替换当前内容</label>
+				</td>
+			</tr>
+			<tr>
+			    <td colspan="2">
+				    <iframe id="keIframe" class="ke-textarea" frameborder="0"></iframe>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,222 @@
+body {
+	ext-align: center;
+	padding: 0;
+}
+
+iframe {
+	height: 100%;
+	width: 100%;
+}
+
+.div_1 {
+	cursor: pointer;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	padding: 0;
+	padding-top: 10px;
+}
+
+.div_2 {
+	width: 100px;
+	height:100%;
+	padding1: 1px;
+/*  	overflow: hidden;  */
+}
+
+.div_3 {
+	height: 50px;
+	padding: 10px;
+}
+
+.OverDiv {
+	border: 1px outset #e4e4e4;
+	border-right: 2px outset #f4f4f4;
+	border-bottom: 2px outset #f4f4f4;
+}
+
+.left {
+	ext-align: left;
+}
+.showMsgTable {
+	border-collapse:separate;
+	border-spacing:20px
+}
+.showMsgTable td{
+	width: 150px;
+}
+.showMsgTable span{
+	color : blue;
+}
+
+.leftMenu .ztree li a.level0 {width:200px;height: 20px; text-align: center; display:block; background-color: #0B61A4; border:1px silver solid;}
+.leftMenu .ztree li a.level0.cur {background-color: #66A3D2; }
+.leftMenu .ztree li a.level0 span {display: block; color: white; padding-top:3px; font-size:12px; font-weight: bold;word-spacing: 2px;}
+.leftMenu .ztree li a.level0 span.button {	float:right; margin-left: 10px; visibility: visible;display:none;}
+.leftMenu .ztree li span.button.switch.level0 {display:none;}
+.ztree li span.button.add {margin-left:2px; margin-right: -1px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
+
+.showAccessTeacherDiv {
+	width: 300px;
+	float: left;
+}
+.showAccessTeacherDiv span {
+	margin: 5px 0px 0px 5px;
+	background-color: orange;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.editDiv{
+	height: 80px;
+	width: 500px;
+	border: 1px solid;
+	display: inline-block;
+	background-color: white;
+	font-size: 15px;
+	padding: 5px;
+}
+
+.fileNameInput{
+	width: 400px;
+}
+
+.fileContentArea1{
+	height: 70px;
+	width: 400px;
+	display: block;
+}
+
+.fileContentArea2{
+	height: 240px;
+	width: 400px;
+	display: block;
+}
+.choiceOptUl{
+	display: inline-block;
+}
+.choiceOptUl li{
+	
+}
+.choiceOptUl textarea{
+/* 	float:none; */
+}
+
+/*added by hefan 2016.03.20*/
+.tag_viewStuState {
+	margin: 2 5 2 5;
+	display:block;
+	border:1px solid #000;
+	height: 15px;
+	width : 15px;
+	background-image: url(../img/eye.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	float: left;
+}
+.tag_setCLassState{
+	margin: 2 5 2 5;
+	display:block;
+	border:1px solid #000;
+	height: 15px;
+	width : 15px;
+	background-image: url(../img/setting.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	float: left;
+}
+.tag_resetStuPsw{
+	margin: 2 5 2 5;
+	display:block;
+	border:1px solid #000;
+	height: 15px;
+	width : 15px;
+	background-image: url(../img/reset.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	float: left;
+}
+.tag_stuManager{
+	margin: 2 5 2 5;
+	display:block;
+	border:1px solid #000;
+	height: 15px;
+	width : 15px;
+	background-image: url(../img/stus.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	float: left;
+}
+/*add by hefan 2016.03.21*/
+.grayspan{
+	margin: 2 5 2 5;
+    padding: 2 3 2 3;
+	display:block;
+	border:1px solid #D1D1D1;
+	background-color:#F7F7F7;
+	float: left;
+}
+.floatLeftInput{
+	display: block;
+    float: left;
+}
+/*add by hefan 2016.04.01*/
+.icon-dir{
+	margin: 2 auto;
+	display:block;
+	height: 20px;
+	width : 20px;
+	background-image: url(../img/dir.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.icon-file{
+	margin: 2 auto;
+	display:block;
+	height: 20px;
+	width : 20px;
+	background-image: url(../img/file.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+/*add by hefan 2016.04.12*/
+.my-uploadify-button {
+	background:none;
+	border: none;
+	text-shadow: none;
+	border-radius:0;
+}
+
+.uploadify:hover .my-uploadify-button {
+	background:none;
+	border: none;
+}
+
+.fileQueue {
+	width: 400px;
+	height: 150px;
+	overflow: auto;
+	border: 1px solid #E5E5E5;
+	margin-bottom: 10px;
+}
+/*add by hefan 2016.04.12*/
+.sortDiv {
+	border:1px solid #B8D0D6;
+	padding:5px;
+	margin:5px;
+	display: block;
+}
+
+.problemContentDiv pre{
+	line-height:25px;
+}
+
+.borderRadiu10{
+	border: 1px black solid;
+	border-radius:10px;
+}
+.whiteBgColor{
+	background-color: white;
+}

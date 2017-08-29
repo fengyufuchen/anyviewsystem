@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+html,body,div,span,p,pre,a,big,dfn,em,font,img,ins,q,sub,sup,ol,ul,li,fieldset,form,label,table,tr,th,td
+	{
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+#content {
+	margin: auto;
+	width: 1024px;
+	height: 640px;
+	background: url("../imgs/login/login.jpg") no-repeat;
+	border: 0;
+	text-align: justify;
+}
+
+#formdiv {
+	border: 0 none;
+	width: 300px;
+	height: 220px;
+	position: relative;
+	left: 648px;
+	top: 378px;
+	width: 300px;
+	height: 220px;
+}
+
+#formdiv input[name='captcha'] {
+	width: 60px;
+}
+
+.buttondiv {
+	padding-top: 30px;
+	letter-spacing: 30px;
+	text-align: center;
+	padding-top: 8%;
+}
+
+.namediv,.passdiv,.codediv,.buttondiv {
+	margin-top: 8px;
+	margin-left: 50px;
+	word-spacing: 6px;
+}
+
+.rankdiv label {
+	font-size: 14px;
+}
+
+.rankdiv {
+	margin-top: 8px;
+	margin-left: 60px;
+}
+
+.sign {
+	font-size: 14px;
+	color: #FF0000;
+}
+
+.universityDiv {
+	margin-left: 50px;
+	word-spacing: 6px;
+	padding-right:82px;
+}
+
+/** 消息框*/
+#msgdiv {
+	width: 250px;
+	height: 25%;
+	background: #f2eada;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	display: none;
+}
+
+#msgdiv #header {
+	height: 20%;
+	background: #bed742;
+}
+
+#msgdiv #header p {
+	padding-top: 12px;
+	text-align: center;
+	font-size: 24px;
+	color: #EE0000;
+	font-weight: 400;
+	letter-spacing: 24px;
+	text-align: center;
+}
+
+#msgdiv #msgcontent {
+	padding-top: 10px;
+	height: 70%;
+	text-indent: 20px;
+	font-size: 18px;
+	color: #000000;
+	font-weight: normal;
+	height: 60%;
+}
+
+#msgdiv #footer div {
+	text-align: right;
+	font-size: medium;
+	font-weight: 300;
+	margin-right: 18px;
+	position: relative;
+	bottom: -15px;
+}
+
+#msgdiv #footer div a:hover {
+	color: #FF0000;
+}

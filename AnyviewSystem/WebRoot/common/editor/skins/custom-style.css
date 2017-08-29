@@ -1,0 +1,35 @@
+.ke-icon-open {
+	background-image: url(common/open.png);
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-save {
+	background-image: url(common/save.png);
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-template {
+	background-image: url(common/template.png);
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-preview {
+	background-image: url(common/preview.png);
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-clear {
+	background-image: url(common/clear.png);
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-code {
+	background-image: url(common/code.png);
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-version {
+	background-image: url(common/backup.png);
+	width: 16px;
+	height: 16px;
+}

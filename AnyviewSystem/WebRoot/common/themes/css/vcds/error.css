@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";body{font-size: 15px;width: 80%;text-align: center;margin: 0 auto;padding: 0px;height: 100%;}
+#error #imgDiv{text-align: center;padding-top: 4%;}
+#error #infoDiv{text-align: center;color: red;font-size: 25px;font-weight: bold;}
+#error #planDiv{text-align: center;color: gray;}
+#error #planDiv #chart{font-family: Arial;font-weight: bolder;background-color: white;border-style: none;color: gray;}
+#error #planDiv #percent{font-family: Arial;border-width: medium;border-style: none;color: gray;}
+#error #footer{text-align: center;font-size: 14px;clear: both;color: #6495ED;position: fixed;top: 97%;right: 15%;margin-top: -30px;}

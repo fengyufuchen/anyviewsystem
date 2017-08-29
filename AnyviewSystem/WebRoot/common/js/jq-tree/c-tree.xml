@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knowledge value="stu_sys">
+    <chapter value="1_第1章 引论" chapVal="1">
+		<level value="1.1_什么是编译程序" url="../stu_content/compiler/text/chapter01/section01.html"></level>
+		<level value="1.2_编译过程和编译程序的结构" url="../stu_content/compiler/text/chapter01/section02.html"></level>
+		<level value="1.3_解释程序" url="../stu_content/compiler/text/chapter01/section03.html"></level>
+		<level value="1.4_编译程序的设计与实现" url="../stu_content/compiler/text/chapter01/section03.html"></level>
+	</chapter>
+	
+	<chapter value="2_第2章 PL/0编译程序的实现" chapVal="2">
+	    <level value="2.1_PL/0语言简介" url="../stu_content/compiler/text/chapter02/section1.html"></level>
+		<level value="2.2_PL/0编译程序的结构" url="../stu_content/compiler/text/chapter02/section2.html"></level>
+		<!-- <level value="2.3_PL/0编译程序的词法分析" url="../stu_content/compiler/text/chapter02/section3.html"></level> -->
+		<level value="2.4_PL/0编译程序的语法语义分析" url="../stu_content/compiler/text/chapter02/section4.html"></level>
+		<level value="2.5_PL/0编译程序中的目标代码结构和代码生成" url="../stu_content/compiler/text/chapter02/section5.html"></level>
+		<level value="2.6_PL/0编译程序的语法错误处理" url="../stu_content/compiler/text/chapter02/section6-7.html"></level>
+		<level value="2.7_PL/0编译程序的目标代码解释执行时的存储分配" url="../stu_content/compiler/text/chapter02/section6-7.html"></level>
+	</chapter>
+	
+	<chapter value="3_第3章 文法和语言" chapVal="3">
+		<level value="3.0_引言" url="../stu_content/compiler/text/chapter03/section0.html"></level>
+		<level value="3.1_语言概述" url="../stu_content/compiler/text/chapter03/section1.html"></level>
+		<level value="3.2_文法与语言的形式定义" url="../stu_content/compiler/text/chapter03/section2.html"></level>
+		<level value="3.3_文法的类型" url="../stu_content/compiler/text/chapter03/section3.html"></level>
+		<level value="3.4_上下文无关文法及其语法树" url="../stu_content/compiler/text/chapter03/section4.html"></level>
+		<level value="3.5_上下文无关文法的句型分析" url="../stu_content/compiler/text/chapter03/section5.html"></level>
+		<level value="3.6_文法实用中的一些说明" url="../stu_content/compiler/text/chapter03/section6.html"></level>
+	</chapter>	
+	
+	<chapter value="4_第四章 词法分析" chapVal="4">
+		<level value="4.1_本章主要内容及重点" url="../stu_content/compiler/text/chapter04/section01.html"></level>
+		<level value="4.2_什么是词法分析程序" url="../stu_content/compiler/text/chapter04/section01.html"></level>
+		<level value="4.3_单词的描述工具" url="../stu_content/compiler/text/chapter04/section02.html"></level>
+		<level value="4.4_有穷自动机" url="../stu_content/compiler/text/chapter04/section03.html"></level>
+		<level value="4.5_正规表达式和有穷自动机" url="../stu_content/compiler/text/chapter04/section04.html"></level>
+		<level value="4.6_有穷自动机和正规文法" url="../stu_content/compiler/text/chapter04/section05.html"></level>
+	</chapter>
+	
+	<chapter value="5_第五章 自顶向下语法分析" chapVal="5">
+		<level value="5.1_确定的自顶向下分析思想" url="../stu_content/compiler/text/chapter05/section1.html"></level>
+		<level value="5.2_LL(1)文法的判别" url="../stu_content/compiler/text/chapter05/section2.html"></level>
+		<level value="5.3_非LL(1)文法到LL(1)文法的等价变换" url="../stu_content/compiler/text/chapter05/section3.html"></level>
+	    <level value="5.4_确定的自顶向下分析方法" url="../stu_content/compiler/text/chapter05/section4.html"></level>
+	</chapter>
+	
+	<chapter value="6_第六章 简单优先分析法" chapVal="6" >
+	    <level value="6.1_自底向上优先分析概述" url="../stu_content/compiler/text/chapter06/section02.html"></level>
+		<level value="6.2_简单优先分析法" url="../stu_content/compiler/text/chapter06/section03.html"></level>
+	</chapter>
+	
+	<chapter value="7_第7章 LR分析法" chapVal="7">
+		<level value="7.1_LR分析概述" url="../stu_content/compiler/text/chapter07/section02.html"></level>
+		<level value="7.2_LR(0)分析" url="../stu_content/compiler/text/chapter07/section03.html"></level>
+		<level value="7.3_SLR(1)分析" url="../stu_content/compiler/text/chapter07/section04.html"></level>
+		<level value="7.4_LR(1)分析" url="../stu_content/compiler/text/chapter07/section05.html"></level>
+		<level value="7.5_LALR(1)分析法" url="../stu_content/compiler/text/chapter07/section06.html"></level>
+	</chapter>
+	
+	<chapter value="8_第8章 语法制导翻译和中间代码生成" chapVal="8">
+		<level value="8.1_属性文法" url="#"></level>
+		<level value="8.2_语法制导翻译概论" url="#"></level>
+		<level value="8.3_中间代码的形式" url="#"></level>
+		<level value="8.4_简单赋值语句的翻译" url="#"></level>
+		<level value="8.5_布尔表达式的翻译" url="#"></level>
+		<level value="8.6_控制结构的翻译" url="#"></level>
+		<level value="8.7_说明语句的翻译" url="#"></level>
+		<level value="8.8_数组和结构的翻译" url="#"></level>
+	</chapter>
+	
+	<chapter value="9_第九章 符号表" chapVal="9">
+		<level value="9.1_符号表的作用和地位" url="../stu_content/compiler/text/chapter09/section01.html"></level>
+		<level value="9.2_符号的主要属性及作用" url="../stu_content/compiler/text/chapter09/section02.html"></level>
+		<level value="9.3_符号表的组织" url="../stu_content/compiler/text/chapter09/section03.html"></level>
+		<level value="9.4_符号表的管理" url="../stu_content/compiler/text/chapter09/section04.html"></level>
+	</chapter>
+	
+	<chapter value="10_第十章 目标程序运行时的存储组织" chapVal="10">
+		<level value="10.1_数据空间的三种不同使用方法和管理方法" url="../stu_content/compiler/text/chapter10/section01.html"></level>
+		<level value="10.2_栈式存储分配的实现" url="../stu_content/compiler/text/chapter10/section02.html"></level>
+		<level value="10.3_参数传递" url="../stu_content/compiler/text/chapter10/section03.html"></level>
+	</chapter>
+	
+	<chapter value="11_第11章 代码优化" chapVal="11">
+	    <level value="11.1_优化技术简介" url="../stu_content/compiler/text/chapter11/section02.html"></level>
+	    <level value="11.2_局部优化" url="../stu_content/compiler/text/chapter11/section03.html"></level>
+	    <level value="11.3_控制流分析和循环优化" url="../stu_content/compiler/text/chapter11/section04.html"></level>
+	</chapter>
+	
+	<chapter value="12_第12章 代码生成" chapVal="12">
+	    <level value="12.1_代码生成概述" url="../stu_content/compiler/text/chapter12/section01.html"></level>
+	    <level value="12.2_一个简单的代码生成程序" url="../stu_content/compiler/text/chapter12/section02.html"></level>
+	</chapter>
+	
+</knowledge>

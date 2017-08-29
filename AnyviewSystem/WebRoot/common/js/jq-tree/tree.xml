@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<knowledge value="stu_sys">
+    <chapter value="1_第1章 绪论" chapVal="1">
+		<level value="1.0_导言" url="../stu_content/datastruct/text/chapter01/index.html">
+		</level>
+		<level value="1.1_课程目的" url="../stu_content/datastruct/text/chapter01/section01.html">
+		</level>
+		<level value="1.2_什么是数据结构" url="../stu_content/datastruct/text/chapter01/section02.html">
+		</level>
+		<level value="1.3_基本概念与术语" url="../stu_content/datastruct/text/chapter01/section03.html">
+		</level>
+		<level value="1.4_抽象数据类型" url="../stu_content/datastruct/text/chapter01/section04.html">
+		</level>
+		<level value="1.5_算法评价原则" url="../stu_content/datastruct/text/chapter01/section05.html">
+		</level>
+		<level value="1.6_算法的时间复杂度分析与空间复杂度分析" url="../stu_content/datastruct/text/chapter01/section06.html">
+		</level>
+	</chapter>
+	<chapter value="2_第2章 线性表" chapVal="2">
+	    <level value="2.0_导言" url="../stu_content/datastruct/text/chapter02/index.html">
+		</level>
+		<level value="2.1_线性表的类型定义" url="../stu_content/datastruct/text/chapter02/section01.html">
+		</level>
+		<level value="2.2_线性表的顺序表示和实现" url="../stu_content/datastruct/text/chapter02/section02.html">
+		</level>
+		<level value="2.3_线性表的链式表示和实现">
+		    <level value="2.3.1_单链表" url="../stu_content/datastruct/text/chapter02/section03.html">
+			</level>
+			<level value="2.3.2_单链表中基本操作的实现" url="../stu_content/datastruct/text/chapter02/section03/part01.html">
+			</level>
+			<level value="2.3.3_单链表的其它扩展操作" url="../stu_content/datastruct/text/chapter02/section03/part06.html">
+			</level>
+		</level>
+	</chapter>
+	<chapter value="3_第3章 栈和队列" chapVal="3">
+		<level value="3.1_栈" url="../stu_content/datastruct/text/chapter03/section01/part01.html">
+		</level>
+		<level value="3.2_队列">
+		    <level value="3.2.1_队列" url="../stu_content/datastruct/text/chapter03/section02/part01.html">
+		    </level>
+			<level value="3.2.2_链队列(链式映象)" url="../stu_content/datastruct/text/chapter03/section02/part02.html">
+			</level>
+			<level value="3.2.3_循环队列(顺序映象)" url="../stu_content/datastruct/text/chapter03/section02/part03.html">
+			</level>
+			<level value="3.2.4_队列的应用" url="../stu_content/datastruct/text/chapter03/section02/part04.html">
+			</level>
+		</level>
+	</chapter>	
+	<chapter value="4_第4章 串" chapVal="4">
+		<level value="4.0_导言" url="../stu_content/datastruct/text/chapter04/section01.html">
+		</level>
+		<level value="4.1_串的类型定义" url="../stu_content/datastruct/text/chapter04/section01.html">
+		</level>
+		<level value="4.2_串的表示和实现" url="../stu_content/datastruct/text/chapter04/section02.html">
+		</level>
+		<level value="4.3_正文模式匹配" url="../stu_content/datastruct/text/chapter04/section03.html">
+		</level>
+	</chapter>
+	<chapter value="5_第5章 数组与广义表" chapVal="5">
+		<level value="5.1_数组">
+		    <level value="5.1.1_概述" url="../stu_content/datastruct/text/chapter05/section01/part01.html">
+			</level>
+			<level value="5.1.2_用抽象数据类型定义数组" url="../stu_content/datastruct/text/chapter05/section01/part02.html">
+			</level>
+			<level value="5.1.3_数组的数据元素的寻址" url="../stu_content/datastruct/text/chapter05/section01/part03.html">
+			</level>
+			<level value="5.1.4_压缩存贮特殊矩阵" url="../stu_content/datastruct/text/chapter05/section01/part04.html">
+			</level>
+			<level value="5.1.5_稀疏矩阵的存贮方法" url="../stu_content/datastruct/text/chapter05/section01/part05.html">
+			</level>
+		</level>
+		<level value="5.2_广义表">
+		    <level value="5.2.1_广义表的知识结构" url="../stu_content/datastruct/text/chapter05/section02/part01.html">
+			</level>
+			<level value="5.2.2_广义表的类型定义" url="../stu_content/datastruct/text/chapter05/section02/part02.html">
+			</level>
+			<level value="5.2.3_广义表的存储表示" url="../stu_content/datastruct/text/chapter05/section02/part03.html">
+			</level>
+			<level value="5.2.4_广义表操作的实现" url="../stu_content/datastruct/text/chapter05/section02/part04.html">
+			</level>
+		</level>
+	</chapter>
+	<chapter value="6_第6章 树和二叉树" chapVal="6">
+	    <level value="6.0_导言" url="../stu_content/datastruct/text/chapter06/section01/index.html">
+	    </level>
+		<level value="6.1_树的定义和基本术语" >
+			<level value="6.1.1_树的应用" url="../stu_content/datastruct/text/chapter06/section01/part01.html">
+			</level>
+			<level value="6.1.2_树的定义" url="../stu_content/datastruct/text/chapter06/section01/part02.html">
+			</level>
+			<level value="6.1.3_有关树的基本术语" url="../stu_content/datastruct/text/chapter06/section01/part03.html">
+			</level>
+			<level value="6.1.4_树的表示及结构特点对比" url="../stu_content/datastruct/text/chapter06/section01/part04.html">
+			</level>
+		</level>
+		<level value="6.2_二叉树">
+			<level value="6.2.1_二叉树的定义" url="../stu_content/datastruct/text/chapter06/section02/part01.html">
+			</level>
+			<level value="6.2.2_二叉树的性质" url="../stu_content/datastruct/text/chapter06/section02/part02.html">
+			</level>
+			<level value="6.2.3_二叉树的存储结构" url="../stu_content/datastruct/text/chapter06/section02/part03.html">
+			</level>
+			<level value="6.2.4_遍历二叉树" url="../stu_content/datastruct/text/chapter06/section02/part04.html">
+			</level>
+			<level value="6.2.5_线索二叉树" url="../stu_content/datastruct/text/chapter06/section02/part05.html">
+			</level>
+		</level>
+		<level value="6.3_树和森林">
+			<level value="6.3.1_树的存储结构" url="../stu_content/datastruct/text/chapter06/section03/part01.html">
+			</level>
+			<level value="6.3.2_树、森林与二叉树的转换" url="../stu_content/datastruct/text/chapter06/section03/part02.html">
+			</level>
+			<level value="6.3.3_树与森林的遍历" url="../stu_content/datastruct/text/chapter06/section03/part03.html">
+			</level>
+		</level>
+		<level value="6.4_哈(赫)夫曼树及其应用">
+			<level value="6.4.1_哈夫曼树的定义基本术语" url="../stu_content/datastruct/text/chapter06/section04/part01.html">
+			</level>
+			<level value="6.4.2_哈夫曼编码" url="../stu_content/datastruct/text/chapter06/section04/part02.html">
+			</level>
+		</level>
+	</chapter>
+	<chapter value="7_第7章 图" chapVal="7">
+		<level value="7.0_导言" url="../stu_content/datastruct/text/chapter07/index.html"></level>
+		<level value="7.1_图的类型定义" url="../stu_content/datastruct/text/chapter07/section01.html"></level>
+		<level value="7.2_图的存储结构" url="../stu_content/datastruct/text/chapter07/section02.html"></level>
+		<level value="7.3_图的遍历" url="../stu_content/datastruct/text/chapter07/section03.html"></level>
+		<level value="7.4_图的连通性问题" url="../stu_content/datastruct/text/chapter07/section04.html"></level>
+		<level value="7.5_有向无环图及其应用" url="../stu_content/datastruct/text/chapter07/section05.html"></level>
+		<level value="7.6_图算法应用设计举例" url="../stu_content/datastruct/text/chapter07/section06.html"></level>
+	</chapter>
+	<chapter value="8_第8章 树和二叉树" chapVal="8">
+		<level value="8.1_导言" url="../index.jsp">
+			<level value="8.1.1_树的定义"></level>
+			<level value="8.1.2_树的基本术语"></level>
+		</level>
+		<level value="8.2_二叉树">
+			<level value="8.2.1_二叉树的基本概念" >
+				<level value="8.2.1.1_二叉树的定义"></level>
+				<level value="8.2.1.2_二叉树的性质">
+					<level value="8.2.1.2.1_性质1"></level>
+					<level value="8.2.1.2.2_性质2"></level>
+					<level value="8.2.1.2.3_性质3"></level>
+					<level value="8.2.1.2.4_性质4"></level>
+					<level value="8.2.1.2.5_性质5"></level>
+				</level>
+				<level value="8.2.1.3_二叉树的存储结构">
+					<level value="8.2.1.3.1_顺序存储结构"></level>
+					<level value="8.2.1.3.2_链式存储结构"></level>
+				</level>
+			</level>
+			<level value="8.2.2_二叉树的遍历" >
+				<level value="8.2.2.1_二叉树的先序遍历"></level>
+				<level value="8.2.2.2_二叉树的中序遍历"></level>
+				<level value="8.2.2.3_二叉树的后序遍历"></level>
+			</level>
+			<level value="8.2.3_二叉树的线索化" >
+				<level value="8.2.3.1_线索二叉树的概念"></level>
+				<level value="8.2.3.2_线索二叉树的存储结构"></level>
+				<level value="8.2.3.3_线索二叉树的遍历"></level>
+				<level value="8.2.3.4_线索二叉树的中序线索化算法"></level>
+			</level>
+		</level>
+		<level value="8.3_树">
+			<level value="8.3.1_树的存储结构">
+				<level value="8.3.1.1_树的双亲表示法"></level>
+				<level value="8.3.1.2_树的孩子表示法"></level>
+				<level value="8.3.1.3_树的孩子兄弟表示法" ></level>
+			</level>
+			<level value="8.3.2_树的遍历" ></level>
+		</level>
+		<level value="8.4_森林">
+			<level value="8.4.1_森林的定义"></level>
+			<level value="8.4.2_森林与二叉树的转换" ></level>
+			<level value="8.4.3_森林的遍历" ></level>
+		</level>
+		<level value="8.5_赫夫曼树" >
+			<level value="8.5.1_最优二叉树(赫夫曼树)的概念"></level>
+			<level value="8.5.2_赫夫曼树的构造算法"></level>
+			<level value="8.5.3_赫夫曼编码"></level>
+		</level>
+	</chapter>
+	
+	<chapter value="9_第9章 查找表" chapVal="9">
+		<level value="9.0_导言" url="../stu_content/datastruct/text/chapter09/index.html"></level>
+		<level value="9.1_静态查找表" url="../stu_content/datastruct/text/chapter09/section01.html"></level>
+		<level value="9.2_动态查找树表">
+			<level value="9.2.1_动态查找表的抽象数据类型定义" url="../stu_content/datastruct/text/chapter09/section02/part01.html"></level>
+			<level value="9.2.2_二叉排序树" url="../stu_content/datastruct/text/chapter09/section02/part02.html"></level>
+			<level value="9.2.3_二叉平衡树" url="../stu_content/datastruct/text/chapter09/section02/part03.html"></level>
+			<level value="9.2.4_B+树" url="../stu_content/datastruct/text/chapter09/section02/part04.html"></level>
+			<level value="9.2.5_B-树" url="../stu_content/datastruct/text/chapter09/section02/part05.html"></level>
+		</level>
+		<level value="9.3_哈希表" url="../stu_content/datastruct/text/chapter09/section03.html"></level>
+	</chapter>
+	
+	<chapter value="10_第10章 内部排序" chapVal="10">
+		<level value="10.0_导言" url="../stu_content/datastruct/text/chapter10/index.html"></level>
+		<level value="10.1_概述" url="../stu_content/datastruct/text/chapter10/section01.html"></level>
+		<level value="10.2_插入类排序" url="../stu_content/datastruct/text/chapter10/section02.html"></level>
+		<level value="10.3_交换类排序" url="../stu_content/datastruct/text/chapter10/section03.html"></level>
+		<level value="10.4_选择类排序" url="../stu_content/datastruct/text/chapter10/section04.html"></level>
+		<level value="10.5_归并排序" url="../stu_content/datastruct/text/chapter10/section05.html"></level>
+		<level value="10.6_基数排序" url="../stu_content/datastruct/text/chapter10/section06.html"></level>
+		<level value="10.7_各种内部排序方法的比较" url="../stu_content/datastruct/text/chapter10/section07.html"></level>
+	</chapter>
+</knowledge>

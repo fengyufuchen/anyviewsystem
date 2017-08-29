@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../jQ_Easy/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../jQ_Easy/themes/icon.css">
+	 <script type="text/javascript" src="../../jQ_Easy/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../jQ_Easy/jq_easyui.min.js"></script>
+	<script type="text/javascript" src="../../js/sys-manage/system-manage.js"></script>
+ 
+    <style type="text/css">
+
+	.winsondiv1 {
+		padding-left: 8px;
+	}
+	.winsonsondiv1 {
+		padding-left: 0px;
+		padding-top: 6px;	
+	}  		
+	.winsonsondiv2 {
+		padding-left: 0px;
+		padding-top: 8px;	
+	}  	
+	.winsonsondiv3 {
+		padding-left: 0px;
+		padding-top: 6px;	
+	}    
+    
+    </style>
+  </head>
+  
+  <body class="easyui-layout" fit="true">
+  <div region="center" style="overflow: hidden;">
+        <div id="tabs" class="easyui-tabs" style="height:650px;">
+            <div title="作业表管理" class="easyui-layout" style="overflow: hidden;" fit=true>
+   
+			    <div region="north" style="height:270px;overflow: hidden;">
+			       <div class="easyui-layout" style="height:270px;">
+			                
+						    <div region="east"  style="width:229px;overflow: hidden;">
+						         <table id="eastTab" ></table>
+						    </div>
+						    <div region="west" style="width:800px;overflow: hidden;">
+						        <table id="westTab" ></table>
+						    </div>
+						    <div region="center" id="centerDiv" style="width:229px;overflow: hidden;">
+						        <table id="centerTab" ></table>
+						    </div> 
+						    
+				    </div>
+			    </div>
+			    
+			    <div region="center" style="height:320px;">
+			        <div class="easyui-layout" style="height:320px;">
+
+					    <div region="west" style="width:1000px;padding:10px 20px;">
+					        <fieldset style="padding-left: 100px;">
+								<legend>
+									<span style="">作业表属性</span>
+								</legend>
+								<table id="table">
+								    <tr>
+								        <td>名称</td><td><input id="vname" type="text"></td>
+								        <td>类型</td><td>
+								            <input id="kind" class="easyui-combobox" panelHeight="50px;"/>
+								               
+								        </td>
+								    </tr>
+		                            <tr><td colspan="4"></td><td><a id="add" href="#" class="easyui-linkbutton">添加</a></td></tr>
+		                            <tr>
+		                                <td>满分值</td><td><input id="full" type="text"/></td>
+		                                <td>课程</td><td><input id="course" class="easyui-bombobox" panelHeight="100px;"/></td>
+		                                </tr>
+								    <tr><td colspan="4"></td><td><a href="#" id="revise"  class="easyui-linkbutton">修改</a></button></td></tr>
+								    <tr>
+								        <td>所在题库</td><td>
+								            <input id="prolibsite" class="easyui-combobox" panelHeight="100px;" style="width:100px;"></input>
+								        </td>
+								        <td>使用情况</td><td>
+								            <input id="status" class="easyui-combobox" panelHeight="100px;" />
+								        </td>
+								    </tr>
+								</table>
+							</fieldset>
+			
+					    </div>
+					    <div region="center" style="padding:5px;width:300px;padding:30px 60px;">
+					        <table>
+			                    <tr><td><a id="manageRefresh" href="#" class="easyui-linkbutton">&nbsp;&nbsp;&nbsp;&nbsp;刷新&nbsp;&nbsp;&nbsp;&nbsp;</a></td></tr>
+			                    <tr><td colspan="1"></td></tr>
+			                    <tr><td><a href="#" id="select" class="easyui-linkbutton" >&nbsp;&nbsp;&nbsp;&nbsp;选题&nbsp;&nbsp;&nbsp;&nbsp;</a></td></tr>
+			                    <tr><td colspan="1"></td></tr>
+			                    <tr><td><a id="rank" class="easyui-linkbutton">&nbsp;&nbsp;访问级别&nbsp;&nbsp;</a></td></tr>
+			                    <tr><td colspan="1"></td></tr>
+			                    <tr><td><a href="#" id="delete" class="easyui-linkbutton">&nbsp;&nbsp;&nbsp;&nbsp;删除&nbsp;&nbsp;&nbsp;&nbsp;</a></td></tr>
+			                </table>
+					    </div> 
+					    
+					    </div>
+			    </div> 
+			    
+            </div>
+    
+    
+    <div id="schemeSetDiv" title="作业表设置" class="easyui-layout" style="overflow: hidden;" fit=true>
+        <div region="north" style="height:60px;">
+            <table style="padding:10px;">
+                <tr><td><input type="radio" name="schemeSet" value="classSet" checked>按班级设置&nbsp;&nbsp;&nbsp; </td> <td><input type="radio" name="schemeSet" value="courseSet">按课程设置 </td><td>&nbsp;&nbsp;&nbsp;<button id="setRefresh" class="easyui-linkbutton" >刷&nbsp;新</button></td></tr>
+            </table>
+        </div>
+        <div region="west" style="width:300px;height:400px;overflow:hidden;">
+           <!--左边的表格  --> <table id="classWestTable"></table>
+        </div>
+        <div region="center" style="height:600px;overflow:hidden;">
+            <div class="easyui-layout" style="height:600px;">
+                <div region="center" style="height:320px;overflow:hidden;">
+                <!-- 右边的表格 -->    <table id="classCenterTable"></table>
+                </div>
+                <div region="south" style="height:280px;">
+                    <table style="padding:20px;">
+                        <tr><td>&nbsp;&nbsp;&nbsp;作业表
+                        
+                        
+							<select id="scheme" name="scheme" panelHeight="70px;" class="easyui-combobox">
+								
+							</select>     
+					
+					
+						   <td>&nbsp;&nbsp;&nbsp;状态
+						       <select id="state" class="easyui-combobox" panelHeight="70px;"  >
+						                <option value="0">停止使用</option>
+						                <option value="1">正在使用</option>
+						        </select>
+						        &nbsp;&nbsp;&nbsp;</td>
+						   <td>&nbsp;&nbsp;&nbsp;<a id="set" class="easyui-linkbutton" >设&nbsp;置</a></td>
+                        </tr>
+                    </table>                                      
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="setProblem" title="题目设置" class="easyui-layout" style="overflow: hidden;" sfit=true>
+        <div region="north" style="height:80px;padding: 30px 60px;">
+            <a id="proLibTutton" href="#" class="easyui-linkbutton">添加题库</a>
+            <a id="proChapTutton" href="#" class="easyui-linkbutton">添加题目目录</a>
+            <a id="problemTutton" href="#" class="easyui-linkbutton">添加题目</a>
+        </div>
+        <div region="center" style="height:500px;">
+            <div id="mainLibDiv" class="easyui-layout" fit=true style="position:absolute; z-index:1">
+                <div region="center">
+                    <table>
+                        <tr>
+                            <td><table id="proLibTable"></table></td>
+                            <td><table id="chapTable"></table></td>
+                            <td><table id="proTable"></table></td>
+                        </tr>
+                    </table>
+                </div>
+                <div  id="proContent" region="east" style="width:642px; padding: 20px 20px;"></div>
+            </div>
+            <div id="libDiv" style="height:80%; width:100%; left:620px; padding: 30px 60px; background-color: #F6F9ED; position:absolute; z-index:2">
+               <table>
+                    <tr>
+                        <td>题库名:<input id="libName" type="text"/></td>
+                        <td>访问级别：<input id="visiRank"/></td>
+                    </tr>
+                    <tr> 
+                        <td>
+                            <table id="libType"></table>
+                        </td>
+                        <td>
+                            <table id="libVisit"></table>
+                        </td>
+                    </tr>
+                   
+                    <tr><td colspan="2"><a id="libConfirm" class="easyui-linkbutton">提交</a></td></tr>
+                </table>
+            </div>
+            <div id="chapDiv" style="height:80%; width:100%; left:620px; padding: 30px 60px; background-color: #F6F9ED; position:absolute; z-index:2">
+                <table>
+                    <tr><td id="currentLib"></td></tr>
+                    <tr><td>题目目录名：<input id="chapName" type="text"/></td></tr>
+                    <tr><td>访问级别：<input id="chapVisit"/></td></tr>
+                    <tr><td><a id="chapConfirm" href="#" class="easyui-linkbutton">提交</a></td></tr>
+                </table>
+            </div>
+            <div id="proDiv1" style="height:80%; width:100%; left:620px; padding: 30px 60px; background-color: #F6F9ED; position:absolute; z-index:2">
+                <table>
+                    <tr><td>题目名称：<input id="proName" type="text"/></td></tr>
+                    <tr><td>题目难度：<input id="degree" type="text"/></td></tr>
+                    <tr><td>题目类型：<input id="proKind" panelHeight="150"/></td></tr>
+                    <tr><td>状态：<input id="proState" panelHeight="75"/></td></tr>
+                    <tr><td>访问级别：<input id="proVisit" panelHeight="50"/></td></tr>
+                    <tr><td>题目简介：<textarea id="proIntro" rows="3" cols="50"></textarea> </td></tr>
+                    <tr><td>提示：<textarea id="proTip" rows="3" cols="50"></textarea> </td></tr>
+                    <tr><td><a id="next1" href="#" class="easyui-linkbutton">下一步</a></td></tr>
+                </table>
+            </div>
+             <div id="proDiv2" style="height:80%; width:100%; left:620px; padding: 30px 60px; background-color: #F6F9ED; position:absolute; z-index:3">
+                <table>
+                    <tr>
+                        <td>主文件名：<input id="mainFileName" type="text"/></td>
+                    </tr>
+                    <tr><td>主文件内容：<textarea id="mainFileContent" rows="5" cols="50"></textarea> </td></tr>
+                    <tr><td>答案文件名：<input id="ansFileName" type="text"/></td></tr>
+                    <tr><td>答案文件内容：<textarea id="ansFileContent" rows="5" cols="50"></textarea> </td></tr>
+                    <tr>
+                        <td>
+                            <a id="last2" href="#" class="easyui-linkbutton">上一步</a>&nbsp;&nbsp;
+                            <a id="next2" href="#" class="easyui-linkbutton">下一步</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+             <div id="proDiv3" style="height:80%; width:100%; left:620px; padding: 30px 60px; background-color: #F6F9ED; position:absolute; z-index:4">
+                <table>
+                    <tr><td>用户文件名：<input id="userFileName" type="text"/></td></tr>
+                    <tr><td>用户文件内容：<textarea id="userFileContent" rows="5" cols="50"></textarea> </td></tr>
+                    <tr><td>头文件名：<textarea id="headFileName" rows="2" cols="50"></textarea> </td></tr>
+                    <tr><td>头文件内容：<textarea id="headFileContent" rows="3" cols="50"></textarea> </td></tr>
+                    <tr>
+                        <td>
+                            <a id="last3" href="#" class="easyui-linkbutton">上一步</a>&nbsp;&nbsp;
+                            <a id="next3" href="#" class="easyui-linkbutton">下一步</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div id="proDiv4" style="height:80%; width:100%; left:620px; padding: 30px 60px; background-color: #F6F9ED; position:absolute; z-index:5">
+                <table>
+                    <tr>
+                        <td>题目内容和文档：<textarea id="proConDoc" rows="6" cols="50"  style="resize:none"></textarea></td>
+                    </tr>
+                    <tr><td>题目初始化设置：<textarea id="proInitSet" rows="6" cols="50"></textarea>  </td></tr>
+                    <tr>
+                        <td>
+                            <a id="last4" href="#" class="easyui-linkbutton">上一步</a>&nbsp;&nbsp;
+                            <a id="proConfirm" href="#" class="easyui-linkbutton">提交</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+            
+        </div>
+    </div>
+   
+    
+    
+    </div>
+    </div>
+    
+    
+    <!-- 各种弹出窗口 -->
+
+			<div id="accessLevelDiv" title="设置访问级别" iconCls="icon-remove">
+				<div class="winsondiv1">
+					<div class="winsonsondiv1">
+						作业表:&nbsp;
+						<input id="v" name="" value="" panelHeight="100px" class="easyui-combobox"></input>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						访问级别:&nbsp;
+						<input id="selRank" name="" value="" panelHeight="65px"></input>
+							
+					
+					</div>
+					<div class="winsonsondiv2" region="center" split="false" border="false"
+					style="height: 250px; overflow: hidden;">
+						<table id="allowable"></table>
+					</div>
+					<div class="winsonsondiv3">
+						<div align="center">
+							<a class="easyui-linkbutton">全选</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a class="easyui-linkbutton" id="confirm" iconCls="icon-ok">确定</a>&nbsp;&nbsp;&nbsp;
+							<a class="easyui-linkbutton" id="cancel" iconCls="icon-cancel">取消</a>
+						</div>
+					</div>
+				</div>
+			</div>    
+			
+    
+			<div id="Test" title="习题Test">
+				<div style="height: 100%; width: 100%;">
+					<iframe id="selectTest" name="" frameborder="0"
+						style="height: 100%; width: 99%;" scrolling="no" src="" classId=""></iframe>
+				</div>
+			</div>
+
+   
+  </body>
+</html>
+

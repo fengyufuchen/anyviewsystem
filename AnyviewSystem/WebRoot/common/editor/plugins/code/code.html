@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Code</title>
+		<style>
+		    body,table{margin:0;padding:0;border:none;background-color: #fff;width:100%;height:100%}
+		    td{padding:5px 0;}
+		    .ke-left {float: left;margin-left:5px}
+		    .ke-right {float: right;margin-right:10px}
+		    .ke-hide{margin-left:5px;display:none;}
+			.ke-textarea {
+				border: 1px solid #848484 #E0E0E0 #E0E0E0 #848484;
+				display: block;
+				font-family: "sans serif", tahoma, verdana, helvetica;
+				font-size: 12px;
+				width:98%;
+				height:340px;
+			}
+		</style>
+		<script type="text/javascript">
+			var KE = parent.KindEditor;
+			location.href.match(/\?id=([\w-]+)/i);
+			var id = RegExp.$1;
+			var stack = KE.g[id].dialogStack;
+			var dialog = stack[stack.length - 1];
+			KE.event.ready(function() {
+				var langType = KE.$('keLangType', document);
+				var stretchFlag = KE.$('keStretchFlag', document);
+				var stretchTitle = KE.$('keStretchTitle', document);
+				var textarea = KE.$('keTextarea', document);
+				KE.event.add(stretchFlag, 'click', function (e) {
+				    var stParent = stretchTitle.parentNode || stretchTitle.parentElement;
+				    if(stretchFlag.checked){
+				       stParent.style.display = "block";
+				    }else{
+				       stParent.style.display = "none";
+				    }
+				});
+				dialog.yesButton.onclick = function(){
+					var cls = langType.value === '' ? '' :  ' lang-' + langType.value;
+					var html = '';
+					if(stretchFlag.checked && stretchTitle.value !== ''){
+					   html = "<span class='stretch point'>" + stretchTitle.value;
+					   html += "<span class='expand'>&nbsp</span>"+"</span>";
+					}
+					html += '<pre class="prettyprint' + cls + '">\n' + KE.util.escape(textarea.value) + '</pre>';
+					KE.util.insertHtml(id,html);
+				    KE.util.focus(id);
+				    dialog.hide();
+				}
+				KE.util.pluginLang('code', document);
+				KE.util.hideLoadingPage(id);
+			}, window, document);
+		</script>
+	</head>
+	<body>
+	    <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+			<tr>
+				<td class="ke-left">
+				    <select id="keLangType">
+				      <option value="cpp">C/C++</option>
+				      <option value="java">Java</option>
+				      <option value="cs">C#</option>
+				      <option value="js">JavaScript</option>
+				      <option value="html">HTML</option>
+				      <option value="css">CSS</option>
+				      <option value="">Other</option>
+				    </select>
+				</td>
+				<td class="ke-right">
+				   <input id="keStretchFlag" type="checkbox" name="keStretchFlag">
+				   <label for="keStretchFlag">伸缩代码</label>
+				</td>
+			</tr>
+			<tr>
+			    <td colspan="2" class="ke-hide">
+			        <label for="keStretchTitle">伸缩标题：</label>
+				    <input id="keStretchTitle" type="text" name="keStretchTitle" style="width:85%">
+				</td>
+			</tr>
+			<tr>
+			    <td colspan="2">
+				    <textarea id="keTextarea" class="ke-textarea"></textarea>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

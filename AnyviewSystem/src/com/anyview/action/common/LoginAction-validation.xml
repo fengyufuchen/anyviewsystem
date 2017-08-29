@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定校验配置文件的DTD信息 -->
+<!DOCTYPE validators PUBLIC 
+"-//Apache Struts//XWork Validator 1.0.2//EN" 
+"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd"> 
+
+
+<validators>
+	<!-- 校验Action的username -->
+	<field name="username">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>请输入帐号</message>
+		</field-validator>
+		<!-- 正则表达式，只能是字母、中文、下划线和数字 -->
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(^[\u4e00-\u9fa5_a-zA-Z0-9]+$)]]></param>
+			<message>帐号信息有误</message>
+		</field-validator>
+	</field>
+	
+	<field name="password">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([A-Za-z0-9_]+)]]></param>
+			<message>密码信息有误</message>
+		</field-validator>
+	</field>
+	
+	<field name="rank">
+		<field-validator type="required">
+			<message>请选择登录帐号类型</message>
+		</field-validator>
+	</field>
+
+
+
+
+
+
+</validators>
+
+
+
+
+

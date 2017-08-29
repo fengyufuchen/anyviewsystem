@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link type="text/css" rel="stylesheet" href="../../../skins/new-style.css"/>
+</head>
+<body>
+    <div class="part left">
+       <p class="step">第1步 需求分析</p>
+       <table class="module-table ke-zeroborder">
+          <tr><td><b>问题描述：</b>假设单链表L不存在，初始化一个带头结点的空链表L。<br/></td></tr>
+          <tr><td><b>初始条件：</b>单链表L不存在。<br/></td></tr>
+          <tr><td><b>操作结果：</b>创建一个带头结点的空链表,<b class="red">L</b> 为指向头结点的指针，头结点分配成功返回<b class="red">OK</b>。<br/></td></tr>
+          <tr><td><br/></td></tr>
+          <tr><td><span class="point">插入带伸缩的代码将出现右边的伸展图案<span class="expand"></span></span><br/></td></tr>
+          <tr><td><b>函数头：</b><b class="red">Status</b> InitList_L(LinkList <b class="red">&L</b>)，<b class="red">L</b>是引用参数。<br/></td></tr>
+          <tr><td><b>问题分析：</b>
+                  <ol>
+                     <li>完成此操作，要掌握C语言中分配内存的函数malloc，要注意这个函数的参数和返回值。</li>
+                     <li>malloc分配的空间类型是单链表的结点类型，由于该结点是头结点且是目前单链表中的唯一结点，因此要注意正确设置结点的指针域。</li>
+                  </ol>
+                  <br/>
+          </td></tr>
+          <tr><td><b>例外情况：</b>头结点分配失败返回<b class=red>ERROR。</b><br/></td></tr>
+       </table>
+    </div>
+</body>
+</html>

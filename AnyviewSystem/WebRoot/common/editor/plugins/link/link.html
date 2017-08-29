@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Link</title>
+		<style type="text/css" rel="stylesheet">
+			body {
+				margin: 0;
+				font:12px/1.5 "sans serif",tahoma,verdana,helvetica;
+				background-color:#F0F0EE;
+				color:#222222;
+				overflow:hidden;
+			}
+			label {
+				cursor:pointer;
+			}
+			.main {
+				margin: 0 10px;
+			}
+			.table {
+				list-style-image:none;
+				list-style-position:outside;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				display:block;
+			}
+			.table li {
+				padding:0;
+				margin-bottom:10px;
+				display:list-item;
+				line-height:1.5;
+			}
+			.table li label {
+				font-weight:bold;
+			}
+			.table li input {
+				vertical-align:middle;
+			}
+			.table li img {
+				vertical-align:middle;
+			}
+		</style>
+		<script type="text/javascript">
+			var KE = parent.KindEditor;
+			location.href.match(/\?id=([\w-]+)/i);
+			var id = RegExp.$1;
+			var fileManager = null;
+			KE.event.ready(function() {
+			    //是否允许浏览服务器
+			    var allowLinkManager = (typeof KE.g[id].allowLinkManager == 'undefined') ? false : KE.g[id].allowLinkManager;
+			    var viewServer = KE.$('viewServer', document);
+				var hyperLink = KE.$('hyperLink', document);
+				var linkType = KE.$('linkType', document);
+				linkType.options[0] = new Option(KE.lang.plugins.link.selfWindow, '');
+				linkType.options[1] = new Option(KE.lang.plugins.link.newWindow, '_blank');
+				var linkNode = KE.plugin['link'].getSelectedNode(id);
+				if (linkNode) {
+					var tempDiv = KE.$$('div', KE.g[id].iframeDoc);
+					tempDiv.appendChild(linkNode.cloneNode(false));
+					var linkHtml = tempDiv.innerHTML;
+					var src = linkNode.href;
+					if (linkHtml.match(/kesrc="([^"]+)"/i)) src = RegExp.$1;
+					var target = linkNode.target;
+					hyperLink.value = KE.util.unescape(src);
+					linkType.value = target == '_blank' ? target : '';
+					var range = KE.g[id].keRange;
+					range.selectTextNode(linkNode);
+					KE.g[id].keSel.addRange(range);
+				}
+				if(!allowLinkManager){
+				    viewServer.parentNode.removeChild(viewServer);
+				    hyperLink.style.width = "90%";
+				}else{
+				    viewServer.value = '\u6d4f\u89c8';
+				    viewServer.style.width = '40px';
+				    KE.event.add(viewServer, 'click', function () {
+					if (fileManager) return false;
+					fileManager = new KE.dialog({
+						id : id,
+						cmd : 'file_manager',
+						file : 'file_manager/file_manager.html?oper=sc@link',
+						width : 500,
+						height : 400,
+						loadingMode : true,
+						title : KE.lang.fileManager+'--\u8d85\u94fe\u63a5',
+						noButton : KE.lang.no,
+						afterHide : function() {
+							fileManager = null;
+						}
+					});
+					fileManager.show();
+				});
+				}
+				KE.util.pluginLang('link', document);
+				KE.util.hideLoadingPage(id);
+			}, window, document);
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<ul class="table">
+				<li>
+					<label for="hyperLink"><span id="lang.url"></span></label>
+					<input type="text" id="hyperLink" name="hyperLink" value="http://" style="width:85%;" />
+					<input type="button" id="viewServer" name="viewServer" value="" />
+				</li>
+				<li>
+					<label for="linkType"><span id="lang.linkType"></span></label>&nbsp;
+					<select id="linkType" name="linkType"></select>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.containt {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "宋体";
+}
+.content {
+	width: 100%;
+	margin: 0 auto;
+}
+.panel_left, .panel_right{
+    width:45%;
+    float:left;
+    height:93%;
+    overflow:hidden;
+}
+.pos{
+    color: #FF0000;
+    position: absolute;
+    top:0;left:0;
+    cursor: pointer;
+    display: none;
+}
+.scroll-hb{
+    float:left;
+    height:93%;
+    top: 0px; 
+    right: 0pt; 
+    -moz-user-select: none; 
+    position: relative; 
+    overflow: hidden; 
+    z-index: 100; 
+    width: 15px; 
+    margin-left: 10px;
+    background: url('images/scroll.gif') repeat-y scroll right 0pt transparent;
+}
+.scroll-vb{
+    float:left;
+    width:95%;
+    top: 0px; 
+    right: 0pt; 
+    -moz-user-select: none; 
+    position: relative; 
+    overflow: hidden; 
+    z-index: 100; 
+    height: 15px; 
+    margin-left: 10px;
+    background: url('images/v-scroll.gif') repeat-x scroll bottom left transparent;
+}
+.scroll-hm{
+    position: absolute;
+    background: url('images/scroll.gif') repeat-y scroll -45px 0pt transparent;
+    border: 1px solid #BCBCBC;
+    -moz-user-select: none;
+    top: 0px; width: 13px;
+}
+.scroll-hm:hover{
+    border: 1px solid #CCCCCC;
+    background: url('images/scroll.gif') repeat-y scroll -58px 0 transparent;
+}
+.scroll-vm{
+    position: absolute;
+    background: url('images/v-scroll.gif') repeat-x scroll 0px 0pt transparent;
+    border: 1px solid #BCBCBC;
+    -moz-user-select: none;
+    top: 0px; height: 13px;
+}
+.scroll-vm:hover{
+    border: 1px solid #CCCCCC;
+    background: url('images/v-scroll.gif') repeat-x scroll -15px 0 transparent;
+}
+.curve{
+	position:absolute; left:0; top:0;
+}
+#graph, #pos_bar{
+	float:left; z-index: 100; 
+	width: 10px; height:93%;
+	overflow: hidden; 
+	background:#E6E6E6;
+	position:relative; left:0; top:0;
+}
+#graph{width: 30px;margin-left: 10px;}
+
+#text_L,#text_R{
+    width: 100%; 
+    height: 100%; 
+    border: 0px; 
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+}
